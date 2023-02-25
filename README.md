@@ -31,11 +31,11 @@ Use English language when naming your variables and functions.
 
 ```js
 /* Bad */
-const primerNombre = 'Gustavo'
+const lePrimerNombre = 'Gustavo'
 const amigos = ['Kate', 'John']
 
 /* Good */
-const firstName = 'Gustavo'
+const name1 = 'Gustavo'
 const friends = ['Kate', 'John']
 ```
 
@@ -155,7 +155,7 @@ Accesses data immediately (i.e. shorthand getter of internal data).
 
 ```js
 function getFruitCount() {
-  return this.fruits.length
+	return this.fruits.length
 }
 ```
 
@@ -165,8 +165,8 @@ You can use `get` when performing asynchronous operations as well:
 
 ```js
 async function getUser(id) {
-  const user = await fetch(`/api/user/${id}`)
-  return user
+	const user = await fetch(`/api/user/${id}`)
+	return user
 }
 ```
 
@@ -178,7 +178,7 @@ Sets a variable in a declarative way, with value `A` to value `B`.
 let fruits = 0
 
 function setFruits(nextFruits) {
-  fruits = nextFruits
+	fruits = nextFruits
 }
 
 setFruits(5)
@@ -196,7 +196,7 @@ setFruits(10)
 console.log(fruits) // 10
 
 function resetFruits() {
-  fruits = initialFruits
+	fruits = initialFruits
 }
 
 resetFruits()
@@ -211,7 +211,7 @@ For example, if you have a collection of selected filters on a search page, remo
 
 ```js
 function removeFilter(filterName, filters) {
-  return filters.filter((name) => name !== filterName)
+	return filters.filter((name) => name !== filterName)
 }
 
 const selectedFilters = ['price', 'availability', 'size']
@@ -228,7 +228,7 @@ Imagine you are a content editor, and there is that notorious post you wish to g
 
 ```js
 function deletePost(id) {
-  return database.find({ id }).delete()
+	return database.find({ id }).delete()
 }
 ```
 
@@ -248,7 +248,7 @@ Creates new data from the existing one. Mostly applicable to strings, objects, o
 
 ```js
 function composePageUrl(pageName, pageId) {
-  return pageName.toLowerCase() + '-' + pageId
+	return pageName.toLowerCase() + '-' + pageId
 }
 ```
 
@@ -260,7 +260,7 @@ Handles an action. Often used when naming a callback method.
 
 ```js
 function handleLinkClick() {
-  console.log('Clicked a link!')
+	console.log('Clicked a link!')
 }
 
 link.addEventListener('click', handleLinkClick)
@@ -277,12 +277,12 @@ A function is often an action on _something_. It is important to state what its 
 ```js
 /* A pure function operating with primitives */
 function filter(list, predicate) {
-  return list.filter(predicate)
+	return list.filter(predicate)
 }
 
 /* Function operating exactly on posts */
 function getRecentPosts(posts) {
-  return filter(posts, (post) => post.date === Date.now())
+	return filter(posts, (post) => post.date === Date.now())
 }
 ```
 
@@ -304,7 +304,7 @@ const isBlue = color === 'blue' // characteristic
 const isPresent = true // state
 
 if (isBlue && isPresent) {
-  console.log('Blue is present!')
+	console.log('Blue is present!')
 }
 ```
 
@@ -327,7 +327,7 @@ Reflects a positive conditional statement (usually `boolean`) coupled with a cer
 
 ```js
 function shouldUpdateUrl(url, expectedUrl) {
-  return url !== expectedUrl
+	return url !== expectedUrl
 }
 ```
 
@@ -341,7 +341,7 @@ Represents a minimum or maximum value. Used when describing boundaries or limits
  * the given min/max boundaries.
  */
 function renderPosts(posts, minPosts, maxPosts) {
-  return posts.slice(0, randomBetween(minPosts, maxPosts))
+	return posts.slice(0, randomBetween(minPosts, maxPosts))
 }
 ```
 
@@ -351,12 +351,12 @@ Indicate the previous or the next state of a variable in the current context. Us
 
 ```jsx
 async function getPosts() {
-  const prevPosts = this.state.posts
+	const prevPosts = this.state.posts
 
-  const latestPosts = await fetch('...')
-  const nextPosts = concat(prevPosts, latestPosts)
+	const latestPosts = await fetch('...')
+	const nextPosts = concat(prevPosts, latestPosts)
 
-  this.setState({ posts: nextPosts })
+	this.setState({ posts: nextPosts })
 }
 ```
 
