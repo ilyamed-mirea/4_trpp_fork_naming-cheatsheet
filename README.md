@@ -51,7 +51,7 @@ const page_count = 5 * 2
 const shouldUpdate = true
 
 /* Good */
-const pageCount = 5
+const pageCount = 2.5 * 4
 const shouldUpdate = true
 
 /* Good as well */
