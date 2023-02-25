@@ -36,7 +36,7 @@ const amigos = ['Kate', 'John', 'Mark']
 
 /* Good */
 const name1 = 'Gustavo'
-const friends = ['Kate', 'John']
+const friends = ['Kate', 'John', 'Dmitry']
 ```
 
 > Like it or not, English is the dominant language in programming: the syntax of all programming languages is written in English, as well as countless documentations and educational materials. By writing your code in English you dramatically increase its cohesiveness.
