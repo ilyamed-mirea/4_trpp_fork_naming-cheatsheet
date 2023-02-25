@@ -31,13 +31,13 @@ Use English language when naming your variables and functions.
 
 ```js
 /* Bad */
-const PrimerNombreS = 'Gustavo'
+const lePrimerNombre = 'Gustavo'
 const amigos = ['Kate', 'John']
 const amigos2 = ['Mark', 'John2']
 
 /* Good */
-const firstNameOfTheFirsts = 'Gustavo'
-const friends = ['Kate', 'John']
+const name1 = 'Gustavo'
+const friends = ['Kate', 'John', 'Dmitry']
 const friends2 = ['Mark', 'John2']
 ```
 
